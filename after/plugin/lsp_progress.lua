@@ -1,7 +1,7 @@
-require'lualine'.setup{
-	sections = {
-		lualine_c = {
-			'lsp_progress'
-		}
-	}
+
+require"fidget".setup{
+    debug = {
+        logging=true,
+        strict=false
+    }
 }

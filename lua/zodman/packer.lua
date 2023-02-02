@@ -9,6 +9,7 @@ return require('packer').startup(function(use)
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
+    use {'nvim-telescope/telescope-ui-select.nvim' }
 
 
     use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'} )
@@ -29,16 +30,6 @@ return require('packer').startup(function(use)
     --
     -- themes
     --
-    use ({
-        'rose-pine/neovim',
-        as = 'rose-pine',
-        config = function()
-            vim.cmd('colorscheme rose-pine')
-        end
-    })
-    use {
-        'nvim-lualine/lualine.nvim',
-    }
     use( 'sainnhe/sonokai')
     use( 'tomasr/molokai')
     use( 'bluz71/vim-moonfly-colors')
@@ -54,14 +45,12 @@ return require('packer').startup(function(use)
     use({ 'catppuccin/nvim',   as= 'catppuccin'} )
     use 'folke/tokyonight.nvim'
 
-
-
-
     --
     -- LSP
     --
     use {
         'VonHeikemen/lsp-zero.nvim',
+        branch = 'v1.x',
         requires = {
             -- LSP Support
             {'neovim/nvim-lspconfig'},
@@ -70,10 +59,10 @@ return require('packer').startup(function(use)
 
             -- Autocompletion
             {'hrsh7th/nvim-cmp'},
+            {'hrsh7th/cmp-nvim-lsp'},     -- Required
             {'hrsh7th/cmp-buffer'},
             {'hrsh7th/cmp-path'},
             {'saadparwaiz1/cmp_luasnip'},
-            {'hrsh7th/cmp-nvim-lsp'},
             {'hrsh7th/cmp-nvim-lua'},
 
             -- Snippets
@@ -82,13 +71,10 @@ return require('packer').startup(function(use)
         }
     }
     use 'JoosepAlviste/nvim-ts-context-commentstring'
-    use 'arkav/lualine-lsp-progress'
-
+    use 'j-hui/fidget.nvim'
     use 'jose-elias-alvarez/typescript.nvim'
-
     use 'jose-elias-alvarez/null-ls.nvim'
-    use {'ojroques/nvim-hardline'}
-
+    use {'akinsho/bufferline.nvim', tag = "v3.*"}
 
 
 end)

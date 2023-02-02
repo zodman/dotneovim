@@ -1,7 +1,3 @@
-require('rose-pine').setup({
-    disable_background = true
-})
-
 function SetTheme()
 	color = "PaperColor"
 	vim.cmd.colorscheme(color)
