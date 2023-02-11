@@ -144,6 +144,11 @@ _G.packer_plugins = {
     path = "/home/zodman/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/morhetz/gruvbox"
   },
+  ["jrnl.vim"] = {
+    loaded = true,
+    path = "/home/zodman/.local/share/nvim/site/pack/packer/start/jrnl.vim",
+    url = "https://github.com/wren/jrnl.vim"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/zodman/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
@@ -279,6 +284,14 @@ _G.packer_plugins = {
     path = "/home/zodman/.local/share/nvim/site/pack/packer/start/vim-solarized8",
     url = "https://github.com/lifepillar/vim-solarized8"
   },
+  ["xit.nvim"] = {
+    config = { "\27LJ\2\0021\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\bxit\frequire\0" },
+    loaded = false,
+    needs_bufread = true,
+    only_cond = false,
+    path = "/home/zodman/.local/share/nvim/site/pack/packer/opt/xit.nvim",
+    url = "https://github.com/synaptiko/xit.nvim"
+  },
   ["zephyr-nvim"] = {
     loaded = true,
     path = "/home/zodman/.local/share/nvim/site/pack/packer/start/zephyr-nvim",
@@ -287,6 +300,18 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Filetype lazy-loads
+time([[Defining lazy-load filetype autocommands]], true)
+vim.cmd [[au FileType xit ++once lua require("packer.load")({'xit.nvim'}, { ft = "xit" }, _G.packer_plugins)]]
+time([[Defining lazy-load filetype autocommands]], false)
+vim.cmd("augroup END")
+vim.cmd [[augroup filetypedetect]]
+time([[Sourcing ftdetect script at: /home/zodman/.local/share/nvim/site/pack/packer/opt/xit.nvim/ftdetect/xit.vim]], true)
+vim.cmd [[source /home/zodman/.local/share/nvim/site/pack/packer/opt/xit.nvim/ftdetect/xit.vim]]
+time([[Sourcing ftdetect script at: /home/zodman/.local/share/nvim/site/pack/packer/opt/xit.nvim/ftdetect/xit.vim]], false)
+vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
