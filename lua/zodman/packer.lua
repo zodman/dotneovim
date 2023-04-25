@@ -7,10 +7,12 @@ return require('packer').startup(function(use)
     -- fuzzy
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
-        requires = { {'nvim-lua/plenary.nvim'} }
+        requires = { 
+            {'nvim-lua/plenary.nvim'} 
+        }
     }
     use {'nvim-telescope/telescope-ui-select.nvim' }
-
+    use('xiyaowong/telescope-emoji.nvim')
 
     use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'} )
 
@@ -37,6 +39,7 @@ return require('packer').startup(function(use)
     use( 'joshdick/onedark.vim')
     use( 'sjl/badwolf')
     use( 'morhetz/gruvbox')
+    use('arcticicestudio/nord-vim')
     use( 'srcery-colors/srcery-vim')
     use( 'lifepillar/vim-solarized8')
     use( 'glepnir/zephyr-nvim')
@@ -44,6 +47,7 @@ return require('packer').startup(function(use)
     use( 'NLKNguyen/papercolor-theme')
     use({ 'catppuccin/nvim',   as= 'catppuccin'} )
     use 'folke/tokyonight.nvim'
+    use  'nyngwang/nvimgelion'
 
     --
     -- LSP

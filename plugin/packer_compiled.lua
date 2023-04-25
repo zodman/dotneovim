@@ -174,6 +174,11 @@ _G.packer_plugins = {
     path = "/home/zodman/.local/share/nvim/site/pack/packer/start/neoformat",
     url = "https://github.com/sbdchd/neoformat"
   },
+  ["nord-vim"] = {
+    loaded = true,
+    path = "/home/zodman/.local/share/nvim/site/pack/packer/start/nord-vim",
+    url = "https://github.com/arcticicestudio/nord-vim"
+  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "/home/zodman/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
@@ -204,6 +209,11 @@ _G.packer_plugins = {
     path = "/home/zodman/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring",
     url = "https://github.com/JoosepAlviste/nvim-ts-context-commentstring"
   },
+  nvimgelion = {
+    loaded = true,
+    path = "/home/zodman/.local/share/nvim/site/pack/packer/start/nvimgelion",
+    url = "https://github.com/nyngwang/nvimgelion"
+  },
   ["onedark.vim"] = {
     loaded = true,
     path = "/home/zodman/.local/share/nvim/site/pack/packer/start/onedark.vim",
@@ -233,6 +243,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/zodman/.local/share/nvim/site/pack/packer/start/srcery-vim",
     url = "https://github.com/srcery-colors/srcery-vim"
+  },
+  ["telescope-emoji.nvim"] = {
+    loaded = true,
+    path = "/home/zodman/.local/share/nvim/site/pack/packer/start/telescope-emoji.nvim",
+    url = "https://github.com/xiyaowong/telescope-emoji.nvim"
   },
   ["telescope-ui-select.nvim"] = {
     loaded = true,
